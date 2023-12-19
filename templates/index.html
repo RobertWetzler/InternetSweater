@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sweater Control</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="/static/snowstorm-min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/menorah.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</head>
+
+<body>
+    <h1>Happy Hannukah!</h1>
+    <h2>Control Robert's Sweater</h2>
+    <button onclick="toggleLED()">Toggle All</button>
+    <button onclick="setMode('strobe')">Strobe</button>
+    <button onclick="setMode('wave')">Wave</button>
+    <button onclick="setMode('random')">Random</button>
+
+    <h2>Click flames to turn them on or off</h2>
+
+    {% include 'menorah.html' %}
+
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/menorah.js') }}"></script>
+</body>
+
+</html>

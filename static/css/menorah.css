@@ -1,0 +1,76 @@
+@keyframes glow {
+    0% { box-shadow: 0 0 9px 1px yellow; }
+    50% { box-shadow: 0 0 14px 2px yellow; }
+    100% { box-shadow: 0 0 9px 1px yellow; }
+}
+
+body {
+    background: #333;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+.scene {
+    position: relative; /* Set relative positioning for the container */
+    width: 100%;
+    max-width: 650px;
+    margin: 50px auto; /* Adjust margin to position the scene vertically */
+    padding-top: 35%; /* Padding top to maintain aspect ratio */
+}
+
+.scene h1, .scene h2 {
+    text-align: center;
+    color: #508FDD;
+}
+
+.scene h1 {
+    font-size: 5em;
+    margin: 0.5em 0;
+    color: #508FDD;
+    
+}
+
+.scene h2 {
+    font-size: 2em;
+    margin: 0;
+    color: #508FDD;
+}
+
+#menorah {
+    position: absolute; /* Position absolutely within .scene */
+    top: 20%;
+    left: 50%;
+    width: 80%;
+    max-width: 650px;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.fire {
+    position: absolute;
+    top: 27%; /* Position from bottom of .scene */
+    width: 5%; /* Width as a percentage of .scene */
+    height: 25%; /* Height as a percentage of .scene */
+    background: radial-gradient(circle at 50% 100%, red, orange, yellow);
+    transform: translateX(-50%); /* This will center the element horizontally */
+    border-radius: 50%;
+    box-shadow: 0 0 9px 1px yellow;
+    animation: glow 1s infinite linear;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* Example positions for the flames, adjust the percentages based on your image */
+.fire.one { left: 13%; }
+.fire.two { top: 24%; left: 22%; }
+.fire.three { top: 24%; left: 30%; }
+.fire.four { top: 20%; left: 37.5%; }
+.fire.five { top: 0%; left: 50%; }
+.fire.six { top: 20%; left: 61%; }
+.fire.seven { top: 24%; left: 70%; }
+.fire.eight { top: 24%; left: 78%; }
+.fire.nine { left: 87%; }
+
